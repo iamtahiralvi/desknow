@@ -1,0 +1,82 @@
+/*======================================
+=          08. Button Css            =
+=======================================*/
+
+
+.btn {
+     padding: 10px 25px;
+     border-radius: 2px;
+     &:focus {
+          color: $white;
+     }
+     &--one {
+          background: #3B1563;
+          color: $white;
+          font-size: 18px;
+          &:hover {
+               color: $white;
+          }
+     }
+    
+     &--two {
+          background: #D4CDFC;
+          color: #222;
+          font-size: 18px;
+          font-weight: 600;
+          box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.3);
+          &:hover {
+               color: #222;
+          }
+          &:focus {
+               color: #222;
+          }
+     } 
+     &--six {
+          background: #ABB16F;
+          color: $white;
+          font-size: 18px;
+          box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.3);
+          &:hover {
+               color: $white;
+          }
+     }
+     &--nine {
+          background: #1E3565;
+          color: $white;
+          font-size: 18px;
+          box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.3);
+          &:hover {
+               color: $white;
+          }
+     }
+     &--white {
+          background: #fff;
+          color: #333;
+          font-size: 14px;
+          font-weight: 600;
+          &:focus {
+               color: #333;
+          }
+     }
+     &--black {
+          background: #222;
+          color: #94BE5C;
+          font-size: 14px;
+          font-weight: 600;
+     }
+     &--full {
+          padding: 14px 25px;
+          width: 100%;
+          border-radius: 0 0 5px 5px;
+          font-weight: 600;
+     }
+     @media #{$tablet-device,$small-mobile}{
+          padding: 10px 13px;
+     }
+     &--bg-2 {
+          background: #95E1F0;
+     }
+     &--bg-3 {
+          background: #ABB16F;
+     }
+}

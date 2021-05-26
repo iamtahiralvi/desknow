@@ -1,0 +1,481 @@
+
+/*=============================================
+=             01. Default Css                 =
+=============================================*/
+// Google fonts
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+
+*, *::after, *::before {
+    box-sizing: border-box;
+  }
+html, body {
+    height: 100%;
+}
+body{
+  line-height: $body-line-height;
+  font-size: $body-font-size;
+  font-style: normal;
+  font-weight: $body-font-weight;
+  visibility: visible;
+  font-family: $font-family-default;
+  color: $body-text-color;
+  position: relative;
+  background-color: $body-bg-color;
+  &.no-overflow{
+    overflow: hidden;
+  }
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: $heading-text-color;
+    margin-top: 0;
+    margin-bottom: 0;
+    line-height: 1.41;
+    font-weight: 600;
+}
+h1 {
+    font-size: 56px;
+    @media #{$desktop-device}{
+      font-size: 46px; 
+    }
+    @media #{$tablet-device}{
+      font-size: 40px;
+    }
+    @media #{$large-mobile}{
+      font-size: 24px;
+    }
+  }
+h2 {
+    font-size: 42px;
+    @media #{$desktop-device}{
+      font-size: 36px; 
+    }
+    @media #{$tablet-device}{
+      font-size: 36px;
+    }
+    @media #{$large-mobile}{
+      font-size: 22px;
+    }
+  }
+h3 {
+    font-size: 36px;
+    @media #{$desktop-device}{
+      font-size: 32px; 
+    }
+    @media #{$tablet-device}{
+      font-size: 28px;
+    }
+    @media #{$large-mobile}{
+      font-size: 20px;
+    }
+}
+h4 {
+    font-size: 32px;
+    @media #{$desktop-device}{
+      font-size: 30px; 
+    }
+    @media #{$tablet-device}{
+      font-size: 28px;
+    }
+    @media #{$large-mobile}{
+      font-size: 22px;
+    }
+}
+h5 {
+    font-size: 30px;
+    @media #{$large-mobile}{
+      font-size: 20px;
+    }
+}
+h6 {
+    font-size: 16px;
+}
+.current-offer {
+    font-size: 40px;
+}
+p:last-child {
+    margin-bottom: 0;
+}
+a, button {
+  color: inherit;
+  display: inline-block;
+  line-height: inherit;
+  text-decoration: none;
+  cursor: pointer;
+}
+a, button, img, input, span {
+  transition: $transition--default;
+}
+*:focus {
+  outline: none !important;
+}
+a:focus {
+  color: inherit;
+  outline: none;
+  text-decoration: none;
+}
+.btn.focus, .btn:focus {
+    outline: none;
+    box-shadow: none;
+}
+a:hover {
+  text-decoration: none;
+  color: $theme-color--default;
+}
+button, input[type="submit"] {
+  cursor: pointer;
+}
+ul {
+  list-style: outside none none;
+  margin: 0;
+  padding: 0;
+}
+.mark, mark {
+    padding: 0 0;
+    background-color: transparent;
+}
+.font-weight--bold {
+    font-weight: 600;
+}  
+.font-weight--reguler {
+    font-weight: 500;
+} 
+.font-weight--normal {
+    font-weight: 400;
+}  
+.font-weight--light {
+    font-weight: 300;
+} 
+
+/*--
+   - Default Class
+*/
+
+
+.text-color-primary {
+    color: $theme-color--default;
+}
+.text-color-secondary {
+    color: $heading-text-two;
+}
+.text-black {
+    color: $theme-color--black !important;
+}
+.text-three {
+    color: #95E1F0;
+}
+.text-four {
+    color: #E3653C;
+}
+.text-five {
+    color: #94BE5C;
+}
+.text-six {
+    color: #1E3565;
+}
+.bg-white {
+    background: $white;
+}
+.bg-gray {
+    background: #F8F8F8;
+}
+.bg-gray-2 {
+    background: #F6FAFE;
+}
+.bg-gray-3 {
+    background: #f6f2ed;
+}
+.bg-theme-default {
+    background: $theme-color--default;
+}
+.theme-bg-secondary {
+    background: $theme-color--two;
+}
+.sub-heading {
+    color: $theme-color-sub--heading;
+}
+.black-bg {
+    background: $black;
+}
+.border-radus-5 {
+    border-radius: 5px;
+}
+.text-green {
+    color: $theme-color--two;
+}
+.bg-gradient {
+   background: rgb(2,0,36);
+background: linear-gradient(90deg, #d48c59 0%, #c89f60 35%, #b1c26e 100%);
+}
+
+
+/*-- Tab Content & Pane Fix --*/
+select {
+    padding: 3px 20px;
+    height: 56px;
+    max-width: 100%;
+    width: 100%;
+    outline: none;
+    border: 1px solid #f8f8f8;
+    border-radius: 5px;
+    background: #f8f8f8 url("../images/icons/selector-icon.png") no-repeat center right 20px;
+    background-color: rgb(248, 248, 248);
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    &:focus {
+        background: #f8f8f8 url("../images/icons/selector-icon.png") no-repeat center right 20px !important;
+    }
+}
+.checkbox input[type="checkbox"] {
+    display: none;
+}
+.checkbox{
+	& input[type="checkbox"]{
+		display: none;
+
+		& + label{
+			position: relative;
+			margin-bottom: 0;
+			font-size: 14px;
+			font-weight: 400;
+			color: #666;
+
+			& span{
+				min-width: 14px;
+				height: 14px;
+				border: 1px solid #ddd;
+				position: relative;
+				border-radius: 3px;
+				top: 5px;
+				margin-right: 5px;
+				transition: transition(0.3s);
+
+				&::before{
+					content: '\f00c';
+					font-family: "";
+					font-weight: 400;
+					font-size: 12px;
+					color: $black;
+					transition: transition(0.3s);
+					position: relative;
+					top: -5px;
+					opacity: 0;
+					visibility: hidden;
+				}
+			}
+		}
+
+		&:checked{
+			& + label{    
+				& span{
+					background-color: $theme-color--default;
+					border-color: $theme-color--default;
+
+					&::before{
+						color: $white;
+						opacity: 1;
+						visibility: visible;
+					}
+				}
+			}
+		}
+	}
+}
+
+
+
+.fixed-bg {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+/*------- Defauld Class --------*/
+.text-black {
+    color: #333;
+}
+.box-shadow-top {
+   box-shadow:  0 10px 15px rgba(0, 0, 0, 0.05)
+}
+.border{
+    border: 1px solid #ededed !important;
+}
+.border-top{
+    border-top: 1px solid #ededed !important;
+}
+.border-right{
+    border-right: 1px solid #ededed !important;
+}
+.border-bottom{
+    border-bottom: 1px solid #ededed !important;
+}
+.border-left{
+    border-left: 1px solid #ededed !important;
+}
+.border-top-dash {
+    border-top: 1px dashed #ddd !important;
+}
+.border-bottom-dash {
+    border-bottom: 1px dashed #ddd !important;
+}
+.border-top-thick {
+    border-top: 2px solid #ededed !important;
+}
+.border-bottom-thick {
+    border-bottom: 2px solid #ededed !important;
+}
+.border-top-drak{
+    border-top: 1px solid rgba(255,255,255,0.2) !important;
+}
+.border-bottom-drak{
+    border-bottom: 1px solid rgba(255,255,255,0.2) !important;
+}
+.section-title {
+    & mark {
+        color: $theme-color--green;
+        padding: .0em;
+        background-color: transparent;
+    }
+}
+.section-sub-title {
+    color: #ababab;
+    font-size: 14px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    line-height: 1.43;
+    margin-top: -5px;
+}
+.section-under-heading {
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 1.40;
+    color: $theme-color--black;
+    & a {
+        color: $theme-color--default;
+        border-bottom: 1px solid #ccc;
+        position: relative;
+        &::before {
+            content: '';
+            width: 0;
+            height: 1px;
+            bottom: -1px;
+            position: absolute;
+            left: auto;
+            right: 0;
+            z-index: 1;
+            -webkit-transition: width .6s cubic-bezier(.25,.8,.25,1) 0s;
+            transition: width .6s cubic-bezier(.25,.8,.25,1) 0s;
+            background: currentColor;
+        }
+        &:hover::before {
+            width: 100%;
+            left: 0;
+            right: auto;
+        }
+    }
+}
+.img-width {
+    width: 100%;
+}
+
+.title-dec-text {
+    text-align: center;
+    max-width: 760px;
+    margin: auto;
+}
+
+::selection {
+    color: $white;
+    background-color: $theme-color--default;
+}
+form {
+    input:focus::-webkit-input-placeholder { color:transparent; }
+    input:focus:-moz-placeholder { color:transparent; } /* FF 4-18 */
+    input:focus::-moz-placeholder { color:transparent; } /* FF 19+ */
+    input:focus:-ms-input-placeholder { color:transparent; } /* IE 10+ */
+    input, textarea{
+        &::placeholder{
+            transition: $transition--default;
+        }
+    }
+}
+input[type="text"]:focus, input[type="email"]:focus, input[type="url"]:focus, input[type="password"]:focus, input[type="search"]:focus, input[type="number"]:focus, input[type="tel"]:focus, input[type="range"]:focus, input[type="date"]:focus, input[type="month"]:focus, input[type="week"]:focus, input[type="time"]:focus, input[type="datetime"]:focus, input[type="datetime-local"]:focus, input[type="color"]:focus, textarea:focus, select:focus, select:focus, textarea:focus {
+    color: $theme-color--default;
+    border-color: $theme-color--default;
+}
+input[type="checkbox"] {
+    position: relative;
+    background: 0 0;
+    border-width: 0;
+    box-shadow: none;
+    margin: 0 10px 0 3px;
+    cursor: pointer;
+}
+
+// - Pages Background Css
+
+.bg-images-01 {
+    background: url(../images/bg/bg-01.png);
+    background-color: #ddd;
+    background-position: center bottom;
+    background-size: cover;
+        background-attachment: fixed;
+    background-position: center center;
+}
+.bg-images-02 {
+    background: url(../images/bg/bg-02.png);
+    background-color: #ddd;
+    background-position: center bottom;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center center;
+}
+.bg-images-03 {
+    background: url(../images/bg/bg-03.png);
+    background-color: #ddd;
+    background-position: center bottom;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center center;
+}
+.bg-images-05 {
+    background: url(../images/bg/bg-05.png);
+    background-color: #ddd;
+    background-position: center bottom;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center center;
+}
+.bg-images-07 {
+    background: url(../images/bg/bg-07.png);
+    background-color: #ddd;
+    background-position: center bottom;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center center;
+}
+.bg-images-08 {
+    background: url(../images/bg/bg-08.png);
+    background-color: #ddd;
+    background-position: center bottom;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center center;
+}
+.bg-images-09 {
+    background: url(../images/bg/bg-09.png);
+    background-color: #ddd;
+    background-position: center bottom;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center center;
+}
+
+canvas {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    padding: 0px;
+    margin: 0px;
+}
+/*=====  End of Default CSS  ======*/
